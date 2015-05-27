@@ -11,7 +11,7 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 function! UpdateSatis()
 python << endOfPython
 
-from hola_vim import update_satis
+from vim_hola import update_satis
 
 update_satis()
 
