@@ -1,25 +1,25 @@
 *hola-vim.txt* A short multi line description of your plugin
 
 ===============================================================================
-CONTENTS                                                             *hola-vim*
+CONTENTS                                                             *vim-hola*
 
-    1. Intro ................................................. |hola-vim-intro|
-    2. Requirements ................................... |hola-vim-requirements|
-    3. Usage ................................................. |hola-vim-usage|
-    4. Licence ............................................. |hola-vim-licence|
+    1. Intro ................................................. |vim-hola-intro|
+    2. Requirements ................................... |vim-hola-requirements|
+    3. Usage ................................................. |vim-hola-usage|
+    4. Licence ............................................. |vim-hola-licence|
 ===============================================================================
-1. Intro                                                       *hola-vim-intro*
+1. Intro                                                       *vim-hola-intro*
 
 Overview of plugin
 
-2. Requirements                                         *hola-vim-requirements*
+2. Requirements                                         *vim-hola-requirements*
 
 What additional programs are required to run the plugin
 
-3. Usage                                                       *hola-vim-usage*
+3. Usage                                                       *vim-hola-usage*
 
 How to use the plugin. What functions does it give the user?
 
-4. Licence                                                   *hola-vim-licence*
+4. Licence                                                   *vim-hola-licence*
 
 This is open source make sure to include a licence
