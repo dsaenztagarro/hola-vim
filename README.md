@@ -16,7 +16,8 @@ Use your plugin manager of choice.
   - Add `Plug 'https://github.com/dsaenztagarro/hola-vim'` to .vimrc
   - Run `:PlugInstall`
 
-## Todo
+## Requirements
 
-1. Write a plugin
-2. Write documentation
+- Running vim inside TMUX session
+- Add to `bash_profile` the environment variables: `$HOLA_DEPLOYER_PASSWORD`
+
