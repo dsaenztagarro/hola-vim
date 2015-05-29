@@ -21,5 +21,11 @@ def update_satis():
     if run_tmux(fabric_command_for('update_satis')):
         print("Updating Satis.")
 
+
+def update_satis_cmd():
+    """ Return as string the fabric command: update_satis """
+    return fabric_command_for('update_satis')
+
+
 if __name__ == '__main__':
     update_satis()
