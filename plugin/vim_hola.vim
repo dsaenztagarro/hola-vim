@@ -1,3 +1,15 @@
+" The "Vim Hola" plugin improves development workflow for HOLA/HELLO
+"
+" Author:  dsaenztagarro
+" URL:     https://github.com/dsaenztagarro/vim-hola
+" Version: 0.1
+" ----------------------------------------------------------------------------
+"
+if exists('g:loaded_vimhola') || &cp
+  finish
+endif
+let g:loaded_vimhola = 1
+
 " --------------------------------
 " Add our plugin to the path
 " --------------------------------
@@ -6,9 +18,9 @@ python import vim
 python sys.path.append(vim.eval('expand("<sfile>:h")'))
 
 " --------------------------------
-"  Function(s)
+"  Fabric commands functions
 " --------------------------------
-function! UpdateSatisCmd()
+function! s:update_satis_cmd()
 python << EOF
 from vim_hola import update_satis_cmd
 
@@ -16,7 +28,7 @@ vim.command("return \"%s\"" % update_satis_cmd())
 EOF
 endfunction
 
-function! RunCommandTest(command)
+function! s:run_command(command)
   if exists('$TMUX')
     if exists(':VimuxRunCommand')
       call VimuxRunCommand(a:command)
@@ -28,9 +40,13 @@ function! RunCommandTest(command)
   endif
 endfunction
 
+" --------------------------------
+"  Commands
+" --------------------------------
+
 function! UpdateSatis()
-  let cmd = UpdateSatisCmd()
-  call RunCommandTest(cmd)
+  let cmd = s:update_satis_cmd()
+  call s:run_command(cmd)
 endfunction
 
 " --------------------------------
