@@ -28,6 +28,14 @@ vim.command("return \"%s\"" % update_satis_cmd())
 EOF
 endfunction
 
+function! s:release_xdebug_port_cmd()
+python << EOF
+from vim_hola import release_xdebug_port_cmd
+
+vim.command("return \"%s\"" % release_xdebug_port_cmd())
+EOF
+endfunction
+
 function! s:run_command(command)
   if exists('$TMUX')
     if exists(':VimuxRunCommand')
@@ -49,7 +57,13 @@ function! UpdateSatis()
   call s:run_command(cmd)
 endfunction
 
+function! ReleaseXdebugPort()
+  let cmd = s:release_xdebug_port_cmd()
+  call s:run_command(cmd)
+endfunction
+
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
 command! HolaUpdateSatis call UpdateSatis()
+command! ReleaseXdebugPort call ReleaseXdebugPort()
